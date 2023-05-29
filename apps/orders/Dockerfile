@@ -1,4 +1,4 @@
-FROM node:alpine as development
+FROM node:alpine As development
 
 WORKDIR /usr/src/app
 
@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build
+RUN npm run build
 
 FROM node:alpine as production
 
@@ -25,4 +25,4 @@ COPY . .
 
 COPY --from=development /usr/src/app/dist ./dist
 
-CMD [ "node", "dist/apps/orders/main" ]
+CMD ["node", "dist/apps/orders/main"]
