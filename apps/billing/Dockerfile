@@ -8,7 +8,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build
+RUN npm run build
 
 FROM node:alpine as production
 
