@@ -14,6 +14,7 @@ import { ConfigModule } from '@nestjs/config';
         RABBIT_MQ_BILLING_QUEUE: Joi.string().required()
       })
     }),
+
     RmqModule
   ],
   controllers: [BillingController],
